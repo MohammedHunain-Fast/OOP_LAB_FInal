@@ -9,7 +9,7 @@ class FileHandler {
         string fileName;
     public:
         FileHandler(string fileName) : fileName(fileName) {
-            fout.open(fileName);
+            fout.open(fileName);                            // to append fout.open(fileName, ios::app);
              if(!fout) {
                 cout << "Error: File could not be created!\n";
                 exit(1);
