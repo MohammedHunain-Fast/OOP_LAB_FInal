@@ -25,5 +25,16 @@ int main() {
 
     fout.close();
 
+    ifstream fin;
+
+    fin.open("List.txt");
+
+    char c;
+    c = fin.get();
+    while(!fin.eof()) {
+        cout << c;
+        c = fin.get();
+    }
+    fin.close();
     return 0;
 }
